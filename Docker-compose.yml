@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/usr/app/backend:rw
+      - /usr/app/backend/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - my-network
+    links:
+      - db:db
+  db:
+    build:
+      context: ./backend/db
+    environment: 
+      - MYSQL_DATABASE=watson
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=192909
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - db-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+  
+volumes:
+  db-data:
+    driver: "local"
