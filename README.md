@@ -14,9 +14,9 @@ $  docker-compose up --build
 ```
 Digitar no terminal 2: <br>
 ```sh
-$  cd frontend <br>
-$  npm install <br>
-$  node app.js <br>
+$  cd frontend 
+$  npm install 
+$  node app.js 
 ```
 Abrir o navegador no endereço:
 http://localhost:8080/
