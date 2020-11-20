@@ -9,13 +9,15 @@ Desenvolvido em Node.js e Mysql com Docker
 É preciso ter o Docker instalado na maquina
 
 Digitar no terminal 1:<br>
-  docker-compose up --build
-  
+```sh
+$  docker-compose up --build
+```
 Digitar no terminal 2: <br>
-  cd frontend <br>
-  npm install <br>
-  node app.js <br>
-  
+```sh
+$  cd frontend <br>
+$  npm install <br>
+$  node app.js <br>
+```
 Abrir o navegador no endereço:
 http://localhost:8080/
 
